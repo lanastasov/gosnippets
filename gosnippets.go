@@ -4,7 +4,7 @@ import (
 	"os"
 	"os/exec"
 	// "path"
-	// "fmt"
+	"fmt"
 )
 
 func ScreenCls() {
