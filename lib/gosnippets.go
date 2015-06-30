@@ -37,11 +37,10 @@ func Defer() {
 	}
 }
 
-func RepeatString(st string, n int) bytes.Buffer {
+func RepeatString(st string, n int) string {
 	var buffer bytes.Buffer
 	for i := 0; i < n; i++ {
 		buffer.WriteString(st)
 	}
-	return buffer
-
+	return buffer.String()
 }
