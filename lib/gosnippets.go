@@ -44,3 +44,42 @@ func RepeatString(st string, n int) string {
 	}
 	return buffer.String()
 }
+
+func Pow(a, b int) int {
+	p := 1
+	for b > 0 {
+		if b&1 != 0 {
+			p *= a
+		}
+		b >>= 1
+		a *= a
+	}
+	return p
+}
+
+func Add(numbers ...int) int {
+	result := 0
+	for _, number := range numbers {
+		result += number
+	}
+	return result
+}
+
+func Closure() int {
+	var fs = [4]func(){}
+
+	for i := 0; i < 4; i++ {
+		defer fmt.Println("defer i = ", i)
+		defer func() { fmt.Println("defer_closure i = ", i) }()
+		fs[i] = func() { fmt.Println("closure i = ", i) }
+	}
+
+	for _, f := range fs {
+		a := 0
+		if a > 0 {
+			f()
+		}
+	}
+
+	return 0
+}
