@@ -97,3 +97,10 @@ func TestEq(a, b []int) bool {
 
 	return true
 }
+
+// cannot convert i (type int) to type []byte
+func testConversion() {
+	var i = 10
+	b := []byte(i)
+	fmt.Println("%v", b)
+}
