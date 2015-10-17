@@ -104,3 +104,9 @@ func testConversion() {
 	b := []byte(i)
 	fmt.Println("%v", b)
 }
+
+func last_element_of_split() {
+	s := "one.two.three"
+	fmt.Println(s)
+	fmt.Println(strings.Split(s, ".")[len(strings.Split(s, "."))-1])
+}
