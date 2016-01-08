@@ -6,6 +6,7 @@ import (
 	// "path"
 	"bytes"
 	"fmt"
+	"strings"
 )
 
 func ScreenCls() {
@@ -99,9 +100,9 @@ func TestEq(a, b []int) bool {
 }
 
 // cannot convert i (type int) to type []byte
-func testConversion() {
+func TestConversion() {
 	var i = 10
-	b := []byte(i)
+	b := []int{i}
 	fmt.Println("%v", b)
 }
 
@@ -109,4 +110,12 @@ func last_element_of_split() {
 	s := "one.two.three"
 	fmt.Println(s)
 	fmt.Println(strings.Split(s, ".")[len(strings.Split(s, "."))-1])
+}
+
+func ZeroValue() {
+	var i int
+	var f float64
+	var b bool
+	var s string
+	fmt.Printf("%v %v %v %q\n", i, f, b, s)
 }
