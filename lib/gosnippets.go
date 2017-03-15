@@ -119,3 +119,9 @@ func ZeroValue() {
 	var s string
 	fmt.Printf("%v %v %v %q\n", i, f, b, s)
 }
+
+func readFromStdin() {
+	reader := bufio.NewReader(os.Stdin)
+	text, _ := reader.ReadString('\n')
+	fmt.Println(text)
+}
