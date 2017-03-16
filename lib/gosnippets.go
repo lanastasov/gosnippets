@@ -126,9 +126,15 @@ func ReadFromStdin() {
 	fmt.Println(text)
 	
 	var a, b, res uint32
-    	fmt.Scanf("%v\n%v", &a,&b)
+	fmt.Scanf("%v\n%v", &a,&b)
 	res = a + b
 	fmt.Println(res)
+	
+	fmt.Print("Enter text: ")
+	var input string
+	fmt.Scanln(&input)
+	fmt.Println(input)
+
 }
 
 func ReverseString(s string) string {
