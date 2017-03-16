@@ -124,6 +124,11 @@ func ReadFromStdin() {
 	reader := bufio.NewReader(os.Stdin)
 	text, _ := reader.ReadString('\n')
 	fmt.Println(text)
+	
+	var a, b, res uint32
+    	fmt.Scanf("%v\n%v", &a,&b)
+	res = a + b
+	fmt.Println(res)
 }
 
 func ReverseString(s string) string {
