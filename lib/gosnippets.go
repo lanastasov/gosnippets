@@ -120,8 +120,25 @@ func ZeroValue() {
 	fmt.Printf("%v %v %v %q\n", i, f, b, s)
 }
 
-func readFromStdin() {
+func ReadFromStdin() {
 	reader := bufio.NewReader(os.Stdin)
 	text, _ := reader.ReadString('\n')
 	fmt.Println(text)
+}
+
+func ReverseString(s string) string {
+	r := []rune(s)
+	for i, j := 0, len(r)-1; i < len(r)/2; i, j = i+1, j-1 {
+		r[i], r[j] = r[j], r[i]
+	}
+	return string(r)
+}
+
+func ReverseWords(s string) string {
+	// convert the string into an array of strings where each entry is a word
+	words := strings.Fields(s)
+	for i, j := 0, len(words)-1; i < j; i, j = i+1, j-1 {
+		words[i], words[j] = words[j], words[i]
+	}
+	return strings.Join(words, " ")
 }
