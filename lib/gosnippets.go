@@ -153,3 +153,15 @@ func ReverseWords(s string) string {
 	}
 	return strings.Join(words, " ")
 }
+
+func IsPalindrome(s string) string {
+	mid := len(s) / 2
+	last := len(s) - 1
+
+	for i := 0; i < mid; i++ {
+		if s[i] != s[last-i] {
+			return "No " + s + " is not Palindrome"
+		}
+	}
+	return "Yes " + s + " is Palindrome"
+}
