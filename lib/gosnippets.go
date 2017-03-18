@@ -66,6 +66,18 @@ func Add(numbers ...int) int {
 	return result
 }
 
+func Prepend() {
+	data := []string{"A", "B", "C", "D"}
+	data = append([]string{"E"}, data...)
+	fmt.Println(data)
+	// [E A B C D]
+
+	a := []int{2, 3, 4}
+	b := 1
+	fmt.Println(append([]int{b}, a...))
+	// [1 2 3 4]
+}
+
 func Closure() int {
 	var fs = [4]func(){}
 
