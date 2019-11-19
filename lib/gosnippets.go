@@ -177,3 +177,21 @@ func IsPalindrome(s string) string {
 	}
 	return "Yes " + s + " is Palindrome"
 }
+
+func RemoveDuplicatesFromSlice(s []string) []string {
+      m := make(map[string]bool)
+      for _, item := range s {
+              if _, ok := m[item]; ok {
+                      // duplicate item
+                      //fmt.Println(item, "is a duplicate")
+              } else {
+                      m[item] = true
+              }
+      }
+
+      var result []string
+      for item, _ := range m {
+              result = append(result, item)
+      }
+      return result
+}
