@@ -213,3 +213,12 @@ func ReplaceNumbersByZeroFromString () {
     }
     fmt.Println(string(newStr[:i]))
 }
+
+// Get back all environment variable
+func OsEnviron() {
+	for _, s := range os.Environ() {
+		kv := strings.SplitN(s, "=", 2) // unpacks "key=value"
+		fmt.Printf("KEY:%q\tVAL:%q\n", kv[0], kv[1])
+	}
+}
+
