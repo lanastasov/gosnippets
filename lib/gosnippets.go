@@ -7,6 +7,7 @@ import (
 	"bytes"
 	"fmt"
 	"strings"
+	"bufio"
 )
 
 func HelloWorld() {
