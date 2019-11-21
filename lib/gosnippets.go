@@ -9,6 +9,10 @@ import (
 	"strings"
 )
 
+func HelloWorld() {
+	fmt.Println("Hello World!")
+}
+
 func ScreenCls() {
 	cmd := exec.Command("cmd", "/c", "cls")
 	cmd.Stdout = os.Stdout
