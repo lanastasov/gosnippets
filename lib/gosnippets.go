@@ -162,6 +162,13 @@ func ReverseString(s string) string {
 	return string(r)
 }
 
+func ReverseString2(s string) (result string) {
+	for _, v  := range s {
+		result = string(v) + result
+	}
+	return 
+}
+
 func ReverseWords(s string) string {
 	// convert the string into an array of strings where each entry is a word
 	words := strings.Fields(s)
