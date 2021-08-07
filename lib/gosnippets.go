@@ -234,3 +234,17 @@ func OsEnviron() {
 	}
 }
 
+// closure
+func Adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
+	}
+}
+// pos := Adder()
+// fmt.Println(pos(1))   -> 1
+// fmt.Println(pos[10])  -> 11
+// fmt.Println(pos[100]) -> 111
+
+
