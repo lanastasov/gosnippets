@@ -151,6 +151,15 @@ func ReadFromStdin() {
 	var input string
 	fmt.Scanln(&input)
 	fmt.Println(input)
+	
+	// Read Until EOF - End of File
+	var a, b int64
+	for {
+		_, err := fmt.Scanln(&a, &b)
+		if err == io.EOF {
+		    break
+		}
+	}
 
 }
 
